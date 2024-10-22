@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PrivyText - Secure Messaging</title>
+</head>
+<body>
+    <h1>PrivyText - Secure Messaging</h1>
+
+    <h2>Send a Message</h2>
+    <form id="sendMessageForm">
+        <input
+            type="text"
+            id="message"
+            placeholder="Enter your message"
+            required
+        />
+        <input
+            type="text"
+            id="recipient"
+            placeholder="Enter recipient"
+            required
+        />
+        <input
+            type="number"
+            id="expiry"
+            placeholder="Expiry in minutes"
+            required
+        />
+        <button type="submit">Send Message</button>
+    </form>
+
+    <div id="response"></div>
+    <!-- This will display the response -->
+
+    <h2>Decrypt a Message</h2>
+    <form id="decryptMessageForm">
+        <input
+            type="text"
+            id="encryptedMessage"
+            placeholder="Enter encrypted message"
+            required
+        />
+        <button type="submit">Decrypt Message</button>
+    </form>
+
+    <div id="decryptionResponse"></div>
+    <!-- This will display the decryption response -->
+
+    <!-- Messages Container -->
+    <div id="messagesContainer">
+        <h2>Your Sent Messages</h2>
+        <ul id="messagesList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- Link to your JavaScript file -->
+</body>
+</html>
